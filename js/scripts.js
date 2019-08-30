@@ -9,8 +9,7 @@ $(document).ready(function(){
       pizzaOrder.addTopping(toppingInput);
     });
 
-    var price = 0
-    $(".totalPizza").text(pizzaOrder.addAmount(price));
+    $(".totalPizza").text(pizzaOrder.addAmount());
 
     $("#orderPizza").text(pizzaOrder.size);
     $("#orderTopping").text(pizzaOrder.topping);
@@ -31,19 +30,19 @@ Pizza.prototype.addTopping = function(topping){
 
 Pizza.prototype.addAmount = function(amount){
   if (this.size === "small" && this.topping.length>3){
-    amount = parseInt(18)
+    amount = parseInt(10 + 8)
   } else if (this.size === "medium" && this.topping.length>3){
-    amount = parseInt(23)
+    amount = parseInt(15 + 8)
   } else {
-    amount = parseInt(28)
+    amount = parseInt(20 + 8)
   }
 
-  if (this.size === "small" && this.topping.length<3){
-    amount = parseInt(15)
-} else if (this.size === "medium" && this.topping.length<3){
-  amount = parseInt(20)
-} else if (this.size === "large" && this.topping.length<3){
-  amount = parseInt(25)
+  if (this.size === "small" && this.topping.length<=3){
+    amount = parseInt(10 + 5)
+} else if (this.size === "medium" && this.topping.length<=3){
+  amount = parseInt(15 + 5)
+} else if (this.size === "large" && this.topping.length<=3){
+  amount = parseInt(20 + 5)
 }
   this.price += amount;
   return this.price;
