@@ -9,17 +9,8 @@ $(document).ready(function(){
       pizzaOrder.addTopping(toppingInput);
     });
 
-    var price = parseInt(0);
-
-    if (sizeInput === "large"){
-      price = parseInt(20)
-    } else if (sizeInput === "medium"){
-      price = parseInt(15)
-    } else {
-      price = parseInt (10)
-    }
-    
-    console.log(pizzaOrder.addAmount(price));
+    var price = 0
+    $(".totalPizza").text(pizzaOrder.addAmount(price));
 
     $("#orderPizza").text(pizzaOrder.size);
     $("#orderTopping").text(pizzaOrder.topping);
@@ -39,6 +30,13 @@ Pizza.prototype.addTopping = function(topping){
 }
 
 Pizza.prototype.addAmount = function(amount){
-  this.price += amount;
+  if (this.size === "small"){
+    amount = parseInt(10)
+  } else if (this.size === "medium"){
+    amount = parseInt(15)
+  } else {
+    amount = parseInt(20)
+  }
+  this.price += amount
   return this.price;
 }

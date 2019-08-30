@@ -14,6 +14,7 @@
       <div class="row">
         <div class="col-md-6">
           <h3>Size</h3>
+          <p>Small</p>
           <select class="form-control" id="size">
             <option>small</option>
             <option>medium</option>
@@ -22,7 +23,7 @@
         </div>
             <div class="col-md-6">
               <div class="form-group">
-                <h3>Choose your toppings! Choose up to 3 for $5. Any more will be $8</h3>
+                <h4>Choose your toppings! Choose up to 3 for $5. Any more will be $8</h4>
                 <input type="checkbox" value="cheese"> Extra Cheese <br>
                 <input type="checkbox" value="pepperoni"> Pepperoni <br>
                 <input type="checkbox" value="mushrooms"> Mushrooms <br>
@@ -33,12 +34,15 @@
                 <input type="checkbox" value="bacon"> Bacon <br>
               </div>
             </div>
-            <button type="submit" class="btn btn-info">Place my order!</button>
+
           </div>
+          <button type="submit" class="btn btn-info">Place my order!</button>
         </form>
+
+          </div>
           <div class="output">
-            <p>You ordered a: <span id="orderPizza"></span> with <span id="orderTopping"></span><p>
-            <p>Your total is: <span class="totalPizza"></span> </p>
+            <p>You ordered a: <span id="orderPizza"></span> pizza with <span id="orderTopping"></span><p>
+            <p>Your total is: $ <span class="totalPizza"></span> </p>
           </div>
         </div>
   </body>
