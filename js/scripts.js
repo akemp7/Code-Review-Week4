@@ -8,9 +8,7 @@ $(document).ready(function(){
       var toppingInput = $(this).val();
       pizzaOrder.addTopping(toppingInput);
     });
-
     $(".totalPizza").text(pizzaOrder.addAmount());
-
     $("#orderPizza").text(pizzaOrder.size);
     $("#orderTopping").text(pizzaOrder.topping);
   });
