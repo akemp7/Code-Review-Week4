@@ -15,12 +15,12 @@ This is a simple pizza order form in which the user has three options for size a
 
 ## Specifications
   1. Allow user to select pizza size, toppings
-    * Input:
-    * Output:
+    * Input: small, mushrooms
+    * Output: You ordered a small pizza with mushrooms
 
   2. Calculate Cost
-    * Input:
-    * Output: 
+    * Input: small, mushrooms
+    * Output: Your total is: $15 ($10 small, $5 for toppings)
 
 ## Known Bugs
 
