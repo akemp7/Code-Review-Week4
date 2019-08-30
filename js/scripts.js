@@ -30,13 +30,21 @@ Pizza.prototype.addTopping = function(topping){
 }
 
 Pizza.prototype.addAmount = function(amount){
-  if (this.size === "small"){
-    amount = parseInt(10)
-  } else if (this.size === "medium"){
-    amount = parseInt(15)
+  if (this.size === "small" && this.topping.length>3){
+    amount = parseInt(18)
+  } else if (this.size === "medium" && this.topping.length>3){
+    amount = parseInt(23)
   } else {
-    amount = parseInt(20)
+    amount = parseInt(28)
   }
-  this.price += amount
+
+  if (this.size === "small" && this.topping.length<3){
+    amount = parseInt(15)
+} else if (this.size === "medium" && this.topping.length<3){
+  amount = parseInt(20)
+} else if (this.size === "large" && this.topping.length<3){
+  amount = parseInt(25)
+}
+  this.price += amount;
   return this.price;
 }
