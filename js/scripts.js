@@ -11,6 +11,7 @@ $(document).ready(function(){
     $(".totalPizza").text(pizzaOrder.addAmount());
     $("#orderPizza").text(pizzaOrder.size);
     $("#orderTopping").text(pizzaOrder.topping);
+    $("#order").trigger("reset");
   });
 });
 
